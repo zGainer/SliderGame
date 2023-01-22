@@ -18,7 +18,7 @@ struct UIKitSliderView: UIViewRepresentable {
                 alpha: CGFloat(thumbAlpha))
     }
 
-    var thumbAlpha: Float
+    var thumbAlpha: Double
     
     func makeUIView(context: Context) -> UISlider {
         
@@ -46,6 +46,7 @@ struct UIKitSliderView: UIViewRepresentable {
 }
 
 extension UIKitSliderView {
+    
     class Coordinator: NSObject {
         
         @Binding var value: Float

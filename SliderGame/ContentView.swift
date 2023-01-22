@@ -12,17 +12,15 @@ struct ContentView: View {
     @State private var targetValue = Int.random(in: 0...100)
     @State private var currentValue = Float.random(in: 0...100)
     
-    private var thumbAlpha: Float {
-        Float(computeScore()) / 100
+    @State private var scorePresented = false
+    
+    private var thumbAlpha: Double {
+        Double(computeScore()) / 100
     }
     
     var body: some View {
         
-        VStack {
-            ZStack {
-                Color(.darkGray)
-            }
-            
+        VStack (spacing: 30) {
             Text("Подвинь слайдер, как можно ближе к: \(targetValue)")
             
             HStack {
@@ -34,14 +32,22 @@ struct ContentView: View {
                 Text("100")
             }
             
-            Button("Проверь меня", action: {})
+            Button("Проверь меня", action: { scorePresented.toggle() })
+                .alert("Your score:", isPresented: $scorePresented, actions: {}) {
+                    Text("\(computeScore())")
+                }
             
-            Button("Начать заново", action: {})
-            
-            Text("\(currentValue)")
-            Text("\(computeScore() / 100)")
+            Button("Начать заново", action: { startNewGame() })
         }
         .padding()
+    }
+}
+
+extension ContentView {
+    
+    private func startNewGame() {
+        targetValue = Int.random(in: 0...100)
+        currentValue = Float.random(in: 0...100)
     }
     
     private func computeScore() -> Int {

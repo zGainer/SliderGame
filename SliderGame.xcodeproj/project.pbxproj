@@ -12,7 +12,6 @@
 		448D80ED297BAE810020F904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448D80EC297BAE810020F904 /* Assets.xcassets */; };
 		448D80F0297BAE810020F904 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448D80EF297BAE810020F904 /* Preview Assets.xcassets */; };
 		448D80F7297BB3600020F904 /* UIKitSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D80F6297BB3600020F904 /* UIKitSliderView.swift */; };
-		448D80F9297BF01A0020F904 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D80F8297BF01A0020F904 /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +21,6 @@
 		448D80EC297BAE810020F904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		448D80EF297BAE810020F904 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		448D80F6297BB3600020F904 /* UIKitSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitSliderView.swift; sourceTree = "<group>"; };
-		448D80F8297BF01A0020F904 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +55,6 @@
 			children = (
 				448D80E8297BAE7F0020F904 /* SliderGameApp.swift */,
 				448D80EA297BAE7F0020F904 /* ContentView.swift */,
-				448D80F8297BF01A0020F904 /* SliderView.swift */,
 				448D80F6297BB3600020F904 /* UIKitSliderView.swift */,
 				448D80EC297BAE810020F904 /* Assets.xcassets */,
 				448D80EE297BAE810020F904 /* Preview Content */,
@@ -144,7 +141,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				448D80EB297BAE7F0020F904 /* ContentView.swift in Sources */,
-				448D80F9297BF01A0020F904 /* SliderView.swift in Sources */,
 				448D80E9297BAE7F0020F904 /* SliderGameApp.swift in Sources */,
 				448D80F7297BB3600020F904 /* UIKitSliderView.swift in Sources */,
 			);
