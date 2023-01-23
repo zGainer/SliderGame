@@ -10,13 +10,6 @@ import SwiftUI
 struct UIKitSliderView: UIViewRepresentable {
     
     @Binding var value: Float
-    
-    private var thumbTintColor: UIColor {
-        UIColor(red: 255,
-                green: 0,
-                blue: 0,
-                alpha: CGFloat(thumbAlpha))
-    }
 
     var thumbAlpha: Double
     
@@ -25,7 +18,6 @@ struct UIKitSliderView: UIViewRepresentable {
         let slider = UISlider()
         
         slider.maximumValue = 100
-        slider.thumbTintColor = thumbTintColor
 
         slider.addTarget(context.coordinator,
                          action: #selector(Coordinator.valueChanged),
@@ -37,7 +29,7 @@ struct UIKitSliderView: UIViewRepresentable {
     func updateUIView(_ uiView: UISlider, context: Context) {
         uiView.setValue(value, animated: true)
         
-        uiView.thumbTintColor = thumbTintColor
+        uiView.thumbTintColor = .red.withAlphaComponent(thumbAlpha)
     }
     
     func makeCoordinator() -> Coordinator {
