@@ -32,12 +32,14 @@ struct ContentView: View {
                 Text("100")
             }
             
-            Button("Проверь меня", action: { scorePresented.toggle() })
-                .alert("Your score:", isPresented: $scorePresented, actions: {}) {
-                    Text("\(computeScore())")
-                }
+            Button("Проверь меня") {
+                scorePresented.toggle()
+            }
+            .alert("Your score:", isPresented: $scorePresented, actions: {}) {
+                Text("\(computeScore())")
+            }
             
-            Button("Начать заново", action: { startNewGame() })
+            Button("Начать заново", action: startNewGame)
         }
         .padding()
     }
